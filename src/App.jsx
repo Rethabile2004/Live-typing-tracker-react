@@ -1,33 +1,42 @@
 import { useState, useEffect } from "react";
 
 function App() {
-  const [input,setInput]=useState("");
-  const [message,setMessage]=useState("");
+  const [input, setInput] = useState("");
+  const [message, setMessage] = useState(false);
+  const [lazyCount, setLazyCount] = useState(0);
 
-  useEffect(()=>{
-    if(!input)return;
+  useEffect(() => {
+    if (!input) return;
 
-    const timeout=setTimeout(()=>{
-      setMessage("You stopped typing...🤔");
-    },2000)
+    const timeout = setTimeout(() => {
+      setMessage(true);
+      setLazyCount((prev) => prev + 1); // increment when stopped
+    }, 2000);
 
-    return ()=>{
-      clearTimeout(timeout);
-    }
-  },[input]);
+    return () => clearTimeout(timeout);
+  }, [input]);
 
-  const handleInputChange=(e)=>{
+  const handleInputChange = (e) => {
     setInput(e.target.value);
-    setMessage("You are typing...🐱‍👤")
-  }
+    setMessage(false);
+  };
 
   return (
-    <div style={{padding:"20px"}}>
-      <h1>Live typing tracker</h1>
-      <input type="text" placeholder="Keep typing..." onChange={handleInputChange} value={input}/>
-      <p>{message}</p>
+    <div style={{ padding: "20px" }}>
+      <h1>Live Typing Tracker</h1>
+      <input
+        type="text"
+        placeholder="Keep typing..."
+        onChange={handleInputChange}
+        value={input}
+      />
+      <p>
+        {message
+          ? `You stopped typing ${lazyCount} times... 🤔`
+          : "You are typing... 🐱‍👤"}
+      </p>
     </div>
-  )
+  );
 }
 
 export default App;
