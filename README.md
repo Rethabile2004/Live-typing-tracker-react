@@ -1,12 +1,45 @@
-# React + Vite
+# ⌨️ Live Typing Tracker – React + Vite  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **live typing tracker application** built with **React + Vite**.  
+This app tracks text input in real time, giving instant feedback as the user types.  
 
-Currently, two official plugins are available:
+Perfect for practicing React fundamentals like **state management**, **props**, and **component reusability**.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Screenshot  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="829" alt="screenshot" src="https://github.com/user-attachments/assets/ce856c7a-e583-4844-8de8-048fe0eb92e3" />  
+<img width="829" height="557" alt="image" src="https://github.com/user-attachments/assets/a40960be-749d-4f54-b48e-10d9f57977ef" />
+
+---
+
+## 🚀 Features  
+
+- ⌨️ Real-time typing feedback  
+- 🔄 Live updates as you type  
+- 🎨 Clean, minimal UI  
+- ⚡ Powered by **React + Vite** for fast performance  
+
+---
+
+## 🛠️ Tech Stack  
+
+- **React** – Component-based UI  
+- **Vite** – Lightning-fast bundler & HMR  
+- **JavaScript (ES6+)** – Logic handling  
+- **CSS** – Styling  
+
+---
+
+## ▶️ Getting Started  
+
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/Rethabile2004/live-typing-tracker-react.git
+   cd live-typing-tracker-react
+   npm install
+   npm run dev
+Open in browser http://localhost:5173/
+
+  
